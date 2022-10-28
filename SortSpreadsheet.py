@@ -21,10 +21,10 @@ def f(functionName):
     if(functionName == 'none'):
         return lambda x: x
 
-    return lambda x: x
+    raise NotImplemented('Function not supported')
 
 
-result = df.sort_values(by=columnName)
+result = df.sort_values(by=columnName, key=f(functionName))
 
 nomePlanilhaSaida = input('Exit File Name: ')
 nomePaginaPlanilha = input('Page: ')
